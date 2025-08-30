@@ -1,0 +1,6 @@
+Agriculture-Related Website  
+• Information portal for farmers   
+• Developed information portal using HTML, CSS, and JavaScript 
+• Designed for farmers to access crop data, weather updates, and resources   
+• Organized content into clear, structured sections for easy navigation 
+• Focused on accessibility and user-friendly design to improve engagement
