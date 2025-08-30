@@ -1,0 +1,651 @@
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+   font-family: 'Times New Roman', Times, serif;
+  font-size: 18px;
+margin: 0;
+overflow-x: hidden;
+background-color:#f8f7f0;
+}
+/* header starts */
+.index-page{
+    background-image: url(../media/sunflower.jpg.jpg);
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    background-size:cover;
+    width: 100%;
+    height:500px;
+    }
+    .navbar-brand{
+      margin-left: 10px;
+      font-size:2em;
+      color:whitesmoke;
+      padding: 10px;
+      font-weight: 400;
+
+    }
+    .hamburger{
+      display: none;
+    }
+  .navbar{
+    display: flex;
+  }
+  .navbar-brand{
+    flex: 2;
+  margin-right: 20px;
+  }
+  .navbar-list{
+    display: flex;
+    gap: 20px;
+    text-align: center;
+  }
+ .navbar-list li{
+  list-style-type: none;
+  position: relative; 
+  cursor: pointer;
+ }
+ .navbar-list li:hover{
+  text-decoration: underline;
+  text-decoration-color:rgb(34, 206, 86); 
+  
+ }
+ .navbar-list li a{
+  text-decoration: none;
+  padding: 30px;
+  color: aliceblue;
+ }
+.dropdown-menu {
+  position: absolute;
+  margin-left: -40px;
+  width: 200px;
+  margin-top: 20px;
+  padding: 10px;
+  line-height:2;
+  display:none ;
+  background-color: rgb(255, 255, 255);
+  z-index: 1;
+}
+.dropdown-menu li a{
+  padding: 10px;
+  color: rgb(20, 21, 22);
+ }
+ .dropdown-menu li:hover{
+  text-decoration-line: underline;
+  text-decoration-color: rgb(34, 206, 86);
+  text-decoration-thickness: 2px;
+ }
+ .dropdown:hover .dropdown-menu{
+   display: block;
+   
+ }
+  .intro{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+ }
+ .intro img{
+  height:600px;
+  width: 600px;
+ flex: 1;
+ margin: 20px;
+ padding: 10px;
+ }
+ .intro h2{
+  font-size:32px; 
+ }
+ .intro p{
+  font-size: 18px;
+ }
+ .intro p,h2{
+  flex: 1;
+  margin: 10px;
+  padding: 20px;
+}
+
+ .div1 h3{
+   font-size: 48px;
+   color: rgb(248, 243, 243);
+   text-align: center;
+   padding-top: 30px;
+  }
+ .div1 h4{
+  text-align: center;
+  color: rgb(248, 243, 243);
+ }
+ .div1 hr{
+  width:60%;
+  margin-top: -20px;
+ }
+ /* header over here */
+/* crop section starts */
+ .crops{
+  margin: 20px;
+  background-image: url(../media/Copilot_20250810_204359.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left top ;
+  color: #f4f4f4;
+ }
+.container{
+  display: grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  column-gap: 10px;
+  row-gap: 25px;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-left: 10px;
+ }
+.card {
+  background-color: #ffffff; 
+  width: 65%;             
+  margin: 32px auto;         
+  border-radius: 6px;      
+  overflow: hidden;         
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);}  
+ .card img {
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0;
+  } 
+ .crops h3{
+  margin: 10px;
+  padding: 10px;
+  font-size: 22px;
+ }
+ .card h3{
+  text-align: center;
+   } 
+ .cash{
+  background-image: none;
+  color: black;
+ }
+.float{
+  display: flex;
+  flex-direction:row;
+  justify-content:space-evenly;
+  max-width: 100%;
+  height:200px;
+  margin-left:20px;
+  padding:20px;
+  align-items: center;
+  background-image:url(../media/Copilot_20250811_125319.png);
+  background-position-x: center;
+}
+/* crops sectio end */
+/* section maize */
+.maize-heading{
+  text-align: center;
+  padding:10px;
+}
+.section-maize{
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  margin: 20px;
+  padding: 20px;
+}
+.section-maize .icon-img{
+  background-color: rgb(230, 230, 59);
+  width:50px;
+  height:50px; 
+  text-align: center;
+  border-radius: 50%;
+}
+
+/* scroll in the front page cattle,vegetables etc... */
+.scroll-container{
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  gap: 1rem;
+  max-width: 100%;
+  height:500px;
+  padding: 10px;
+  margin: 10px;
+  background-color: #46aa4b;
+  padding-bottom: 20px;
+}
+
+ .card-row{
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 1rem;
+  scrollbar-width: none;
+ 
+ }
+  
+ .no-scrollbar{
+  display: none;
+ }
+ .kard{
+  flex: 0 0 auto;
+  width: 400px;
+  height: 350px;
+  border: 1px solid  #ccc;
+  border-radius: 8px;
+  padding: 0.5rem;
+  text-align: center;
+  background: #f9f9f9;
+   cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  }
+  .kard:hover,.kard:focus{
+   transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+   
+  }
+  .kard span{
+    font-size: 18px;
+    font-weight: bolder;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  .kard span:hover{
+    color: #ce2844;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+  }
+  .kard span:active{
+    color: #388e3c;
+  }
+  .kard img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+/* #4CAF50; */
+ .scroll-btn{
+    background-color: #1f5521;
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 50%
+ }
+.scroll-btn:hover {
+  background-color: #388e3c;
+}
+
+/* others cattle pages*/
+.others{
+  max-width: 100%;
+  margin: 16px; 
+  
+ }
+.details{
+   display: flex;
+  flex-direction:column;
+  gap:20px;
+ align-items: center;
+  justify-content: center;
+} 
+
+.cattle{
+  width:50%;
+  height: 50%;
+}
+.cattle-table{
+   width: 50%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 1rem;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.cattle-table thead{
+  font-size: 20px;
+}
+
+.cattle-table th,
+.cattle-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+ .cattle-table thead {
+  background-color: #198754; 
+  color: #fff;}
+
+.cattle-table tbody tr:hover {
+  background-color: #f1fdf6;
+}
+/* cattle page end here */
+
+ /* rice page */
+ .rice-body{
+  max-width: 100%;
+   margin: 14px;
+ text-align: center;
+ }  
+.rice-page ul {
+ display: flex;
+ flex-direction: row;
+ justify-content: end;
+ align-items: end;
+ text-align: center;
+ gap: 20px;
+/* rgb(78, 179, 78); */
+ list-style: none;
+ background-color: rgb(43, 124, 43);
+ height: 100px;
+}
+.rice .text{
+ display: flex;
+ flex-direction: row;
+ column-gap: 20px;
+ justify-content: space-around;
+ align-items: center;
+ }
+
+.rice img{
+   border-radius: 10px;
+ margin-left: 40px;
+}
+.rice-page li a{
+  list-style: none;
+  text-decoration: none;
+   color: aliceblue;
+   font-weight:bolder;
+     transition: color 0.3s ease;
+}
+.rice-page li a:hover{
+ text-decoration: underline;
+ text-decoration-color:whitesmoke;
+}
+.list1{list-style: none;}
+.cards {
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  padding: 20px;
+  margin: auto auto;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 70%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+   
+}
+.cards ul li{
+ text-align: justify;
+}
+.rice h3{
+  color:rgb(25, 148, 25) ;
+  font-size: 1.5em;
+  text-decoration: underline;
+
+}
+.rice p,li{
+  font-size: 18px;
+}
+/* rice end here */
+/* cash crops page */
+h1{
+  text-align: center;
+  margin-bottom: 30px;
+  color: #2c3e50;
+}
+.cash-page{
+  max-width: 100%;
+  background-image: url(../media/Copilot_20250811_125319.png);
+}
+.cash-page .section1{
+  display: flex;
+  flex-direction:row;
+  gap: 30px;
+  justify-content: space-around;
+}
+.cash-page img{
+  flex: 2;
+}
+.cash-page .accordion{
+  flex: 1;
+}
+
+.cash-page img{
+  max-width: 45%;
+  max-height: 300px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  /* margin: 20px; */
+}
+.accordion{
+  max-width: 500px;
+  /* margin: auto; */
+}
+ .accordion-item {
+      background: #fff;
+      border: 1px solid #ddd;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    .accordion-header {
+      padding: 15px 20px;
+      cursor: pointer;
+      font-weight: bold;
+      background-color:#c2edda ;
+      /* background-color: #e0f7fa; */
+      color: #00796b;
+      
+    }
+
+    .accordion-body {
+      padding: 15px 20px;
+      display: none;
+      background-color: #ffffff;
+      color: #333;
+    }
+
+    .accordion-item.active .accordion-body {
+      display: block;
+    }
+   /* cattle pages ends here */
+
+  /* weather app */
+
+
+
+/* fertilizer calculator */
+.calculators {
+  font-family: Arial, sans-serif;
+  background: #f0f8ff;
+  height: 100vh;
+  max-width: 100%;
+  background-color: #85eb8a;
+  /* background-image: url(../media/Copilot_20250811_125319.png); */
+}
+
+header{
+  max-width: 100%;
+  margin: 4px;
+}
+.calculator{
+ display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-cal {
+  background: white;
+  padding: 30px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 400px;
+  text-align: center;
+}
+
+label, select, input {
+  display: block;
+  margin: 10px auto;
+  width: 100%;
+  padding: 8px;
+}
+
+button {
+  padding: 10px 20px;
+  background:  #68d86e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#result {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+/* fertilizer calculator */
+
+
+
+
+
+
+    /* media */
+    @media only screen and (min-width:320px) and (max-width:1024px){
+      .navbar-brand{
+       font-size:22px;
+     }
+     .hamburger {
+      display:block;
+      color:white;
+      cursor:pointer;
+      margin:12px;
+      position: relative;
+     }
+     .navbar-list{
+      display:none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      width:200px;
+     }
+      .navbar-list li a{
+        color: #333;
+      }
+     .navbar-list.show{
+      display: flex;
+      flex-direction: column;
+      background-color: #f5f2f2;
+      color: black;
+     }
+      
+    .dropdown-menu {
+    position:static;
+    margin-left:-12px;
+    background-color:#f5f2f2;
+  }
+
+  .dropdown:hover .dropdown-menu {
+    display: flex;
+    flex-direction: column;
+  }
+   .intro{
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+ } 
+ .intro img{
+  height:300px;
+  width: 300px;
+ }
+.rice .text{
+ display: flex;
+ flex-direction:column;
+ }
+ .text p{
+  text-align:center;
+ }
+ .text img{
+   max-height:250px;
+  max-width:250px;
+ }
+ .entire{
+  margin:20px;
+  padding:20px ;
+ }
+ .entire img{
+  margin: 10px;
+ }
+.cash-page .section1{
+  display:flex;
+  flex-direction:column;
+  gap: 30px;
+  }
+  /* section maize */
+  .section-maize {
+    display: flex;
+    flex-direction:column;
+    
+    }
+  .section-maize div{
+   text-align: center;
+  }
+  /* slider */
+   .kard{
+    max-width: 350px;
+    font-size: 1rem;
+  }
+  .scroll-container{
+  display: flex;
+  overflow: hidden;
+   max-width: 100%;
+  height:350px;
+  }
+ .kard img {
+  height: 300px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+ .scroll-btn{
+  font-size: 1rem;
+  padding:0.5rem;
+ }
+ }
+     
+
+
+
+
+
+
+
+
+     @media (max-width: 600px) {
+      body {
+        padding: 10px;
+      }
+
+      .accordion-header, .accordion-body {
+        padding: 10px 15px;
+      }
+      
+    }

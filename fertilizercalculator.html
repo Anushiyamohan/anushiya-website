@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fertilizer Calculator</title>
+  <link rel="stylesheet" href="../demo/style.css">
+</head>
+<body class="calculators">
+     <header>
+    <nav class="rice-page">
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="">ABOUT US</a></li>
+            <li><a href="">CONTACT US</a></li>
+
+        </ul>
+    </nav>
+   </header>
+   <section class="calculator">
+  <div class="container-cal">
+    <h1>Fertilizer Calculator</h1>
+    <label for="pop">Select Crop:</label>
+    <select id="pop">
+      <option value="">--Choose--</option>
+      <option value="rice">Rice</option>
+      <option value="wheat">Wheat</option>
+      <option value="maize">Maize</option>
+    </select>
+
+    <label for="area">Land Area (in acres):</label>
+    <input type="number" id="area" placeholder="Enter area">
+
+    <button onclick="calculateFertilizer()">Calculate</button>
+
+    <div id="result"></div>
+  </div>
+  </section>
+
+  <script >
+    function calculateFertilizer() {
+  const crop = document.getElementById("pop").value;
+  const area = parseFloat(document.getElementById("area").value);
+  const resultDiv = document.getElementById("result");
+
+  if (!crop || isNaN(area) || area <= 0) {
+    resultDiv.innerHTML = "Please enter valid crop and area.";
+    return;
+  }
+
+  // Basic fertilizer rates per acre (in kg)
+  const rates = {
+    rice: 100,
+    wheat: 80,
+    maize: 90
+  };
+
+  const fertilizerNeeded = rates[crop] * area;
+  resultDiv.innerHTML = `You need approximately <strong>${fertilizerNeeded} kg</strong> of fertilizer for ${area} acre(s) of ${crop}.`;
+}
+
+  </script>
+</body>
+</html>
